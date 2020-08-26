@@ -90,11 +90,18 @@ export const asyncRoutes = [
     redirect: '/book/create',
     component: Layout,
     meta: { title: '图书管理', icon: 'documentation', roles: ['admin'] },
-    children: [{
-      path: '/book/create',
-      component: () => import('@/views/book/create'),
-      meta: { title: '上传图书', icon: 'edit', roles: ['admin'] }
-    }]
+    children: [
+      {
+        path: '/book/create',
+        component: () => import('@/views/book/create'),
+        meta: { title: '上传图书', icon: 'edit', roles: ['admin'] }
+      },
+      {
+        path: '/book/manage',
+        component: () => import('@/views/book/manage'),
+        meta: { title: '管理图书', icon: 'edit', roles: ['admin'] }
+      }
+    ]
   },
   { path: '*', redirect: '/404', hidden: true }
 
