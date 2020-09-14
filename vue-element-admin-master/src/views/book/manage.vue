@@ -1,9 +1,10 @@
 <template>
-  <div>上传图书</div>
+  <div>图书管理</div>
 </template>
 
 <script>
 export default {
+  name: 'Manage'
 }
 </script>
 
